@@ -4,7 +4,7 @@ A full-screen splitscreen AI simulation viewer built with C++, WebGL, and WebAss
 
 ## 🚀 Live Demo
 
-[View on GitHub Pages](https://yourusername.github.io/cplusplus1/)
+[View on GitHub Pages](https://Aptyll.github.io/Low-Level-Prototype/)
 
 ## 🛠️ Quick Start
 
