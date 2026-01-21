@@ -2,7 +2,7 @@
 
 **C++/WebGL/WebAssembly/Emscripten**
 
-![AI Simulation Preview](assets/readmephoto1.png)
+![AI Simulation Preview](assets/testing1.gif)
 
 4-way splitscreen AI simulation with real-time rendering and dynamic camera tracking.
 
