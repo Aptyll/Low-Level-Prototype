@@ -2,7 +2,7 @@
 
 **C++/WebGL/WebAssembly/Emscripten**
 
-![AI Simulation Preview](assets/testing1.gif)
+<img src="assets/testing1.gif" alt="AI Simulation Preview" loop autoplay>
 
 4-way splitscreen AI simulation with real-time rendering and dynamic camera tracking.
 
