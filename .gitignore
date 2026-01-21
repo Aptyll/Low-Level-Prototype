@@ -1,0 +1,28 @@
+# Emscripten SDK (development dependency)
+emsdk/
+
+# Build artifacts (keep build/ directory but ignore intermediate files)
+build/*.wasm.map
+build/*.js.map
+
+# IDE and editor files
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+debug.log
+
+# Temporary files
+*.tmp
+*.bak
+*.cache

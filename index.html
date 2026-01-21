@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASM Grid Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #splitscreen-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .viewport {
+            position: relative;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            background: #0a0a0a;
+            /* Canvas size is set dynamically by JavaScript to match viewport */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Team color overlays for viewport identification */
+        .viewport:nth-child(1)::before { /* Red team */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 0, 0, 0.3);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .viewport:nth-child(2)::before { /* Blue team */
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 255, 0.3);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .viewport:nth-child(3)::before { /* Purple team */
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: rgba(128, 0, 128, 0.3);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .viewport:nth-child(4)::before { /* Brown team */
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: rgba(139, 69, 19, 0.3);
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="splitscreen-container">
+        <div class="viewport">
+            <canvas id="canvas-red" width="400" height="400"></canvas>
+        </div>
+        <div class="viewport">
+            <canvas id="canvas-blue" width="400" height="400"></canvas>
+        </div>
+        <div class="viewport">
+            <canvas id="canvas-purple" width="400" height="400"></canvas>
+        </div>
+        <div class="viewport">
+            <canvas id="canvas-brown" width="400" height="400"></canvas>
+        </div>
+    </div>
+    
+    <script src="build/game.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
